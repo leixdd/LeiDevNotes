@@ -9,8 +9,14 @@
          ```php  
          \Schema::defaultStringLength(191); 
          ``` 
-         inside of boot method of AppServiceProvider
+         inside of boot method of AppServiceProvider.
+         Then run 
          
+         > php artisan migrate 
+         
+         again
+         
+       - **Code**
          ```php
             <?php
 
