@@ -53,7 +53,7 @@
  * **Tip for Validations with numbers, letters and spaces**
    
    ```php
-      >> AppServiceProvider.php
+       //AppServiceProvider.php
       
        \Validator::extend('alpha_spaces', function($attr, $value, $parameters, $validator) {
             return preg_match('/^[a-zA-Z\s]+$/', $value);
