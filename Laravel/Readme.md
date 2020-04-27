@@ -50,6 +50,9 @@
 
          ```
 
+
+
+
  * **Tip for Validations with numbers, letters and spaces**
    
    ```php
@@ -64,4 +67,32 @@
         });
    ```
    After that create a validation message on resource/lang/validation.php
+   
+   
+ * **Laravel Queue Systemd**
+ 
+ ```
+ 
+  # Laravel queue worker using systemd
+  # ----------------------------------
+  #
+  # /lib/systemd/system/queue.service
+  #
+  # run this command to enable service:
+  # systemctl enable queue.service
+
+  [Unit]
+  Description=Laravel queue worker
+
+  [Service]
+  User=nginx
+  Group=nginx
+  Restart=always
+  ExecStart=/usr/bin/nohup /usr/bin/php /var/www/html/laravel-project/artisan queue:work --daemon
+
+  [Install]
+  WantedBy=multi-user.target
+ 
+ ```
+ 
    
