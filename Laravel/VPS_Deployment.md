@@ -1,4 +1,4 @@
-#Laravel VPS Deployment (Ubuntu)
+# Laravel VPS Deployment (Ubuntu)
 
 1. Clone the Project
 2. Run Composer install and npm install
